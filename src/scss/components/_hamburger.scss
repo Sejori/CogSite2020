@@ -1,0 +1,39 @@
+#toggle-main-menu-mobile {
+  position: fixed;
+  right: 10px;
+}
+
+.hamburger {
+  background-color: #fdb834;
+  border-radius: 50%;
+  padding: 10px;
+  padding-top: 10px;
+  outline: none;
+  z-index: 10;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
+  &:focus {
+    outline: none;
+  }
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after {
+    background: $white;
+    height: 2px;
+    margin-top: 1px;
+  }
+  .hamburger-inner::after {
+    width: 18px;
+    right: 0;
+  }
+  &.is-active {
+    .hamburger-inner::after {
+      width: inherit;
+      right: unset;
+    }
+  }
+}
