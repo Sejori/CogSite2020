@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, Link, StaticQuery } from 'gatsby';
+import { trackCustomEvent } from 'gatsby-plugin-google-analytics'
 import linkedIn from '../images/li.svg'
 import twitter from '../images/tw.svg'
 
@@ -7,11 +8,11 @@ const Footer = props => (
   <div className="footer footer-strip">
     <div className="container">
       <h3 className="footer-title">Cognitant</h3>
-      <div class="social-media">
-        <a href="https://www.linkedin.com/company/cognitant/" onclick="ga('send', 'event', 'footer', 'linkedin');">
+      <div className="social-media">
+        <a href="https://www.linkedin.com/company/cognitant/" onClick={trackCustomEvent({ category: "footer", action: "linkedin" })}>
           <img src={linkedIn} className="icon" alt="LinkedIn" />
         </a>
-        <a href="https://twitter.com/Cognitant" onclick="ga('send', 'event', 'footer', 'twitter');">
+        <a href="https://twitter.com/Cognitant" onClick={trackCustomEvent({ category: "footer", action: "twitter" })}>
           <img src={twitter} className="icon" alt="Twitter" />
         </a>
       </div>
