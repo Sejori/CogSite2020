@@ -9,21 +9,29 @@ module.exports = {
     },
     menuLinks: [
       {
-        name: 'Services',
-        link: '/services',
+        name: 'Home',
+        link: '/home',
       },
       {
-        name: 'Team',
-        link: '/team',
+        name: 'What We Do',
+        link: '/what-we-do',
       },
       {
-        name: 'Testimonials',
-        link: '/testimonials',
+        name: 'Case Studies',
+        link: '/case-studies',
+      },
+      {
+        name: 'About',
+        link: '/about',
+      },
+      {
+        name: 'News',
+        link: '/news',
       },
       {
         name: 'Contact',
         link: '/contact',
-      },
+      }
     ],
   },
   plugins: [

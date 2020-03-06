@@ -19,7 +19,7 @@
 .logo-mobile {
   display: block;
   width: 150px;
-  @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(lg) {
     display: none;
   }
   img {

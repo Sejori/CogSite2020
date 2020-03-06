@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'gatsby';
 import Menu from './Menu';
 import Hamburger from './Hamburger';
-import logo from '../images/cognitant.svg';
 import logoMobile from '../images/cognitant.svg';
 import MenuMobile from './MenuMobile';
 
@@ -24,11 +23,6 @@ class Header extends React.Component {
     return (
       <div className="header">
         <div className="container">
-          <div className="logo">
-            <Link to="/">
-              <img alt="Cognitant" src={logo} />
-            </Link>
-          </div>
           <div className="logo-mobile">
             <Link to="/">
               <img alt="Cognitant" src={logoMobile} />
