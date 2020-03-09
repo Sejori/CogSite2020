@@ -10,11 +10,12 @@ module.exports = {
     menuLinks: [
       {
         name: 'Home',
-        link: '/home',
+        link: '/',
       },
       {
         name: 'What We Do',
         link: '/what-we-do',
+        dropdown: true,
       },
       {
         name: 'Case Studies',
@@ -23,6 +24,7 @@ module.exports = {
       {
         name: 'About',
         link: '/about',
+        dropdown: true,
       },
       {
         name: 'News',

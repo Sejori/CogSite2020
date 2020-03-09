@@ -10,7 +10,7 @@ const Menu = (props) => {
       <ul>
         {menuLinks.map((link, index) => index < 3 ? (
           <li key={link.name}>
-            <Link to={link.link}>{link.name}</Link>
+            <Link to={link.dropdown ? null : link.link}>{link.name}</Link>
           </li>
         ) : null )}
       </ul>
@@ -22,7 +22,7 @@ const Menu = (props) => {
       <ul>
         {menuLinks.map((link, index) => index > 2 ? (
           <li key={link.name}>
-            <Link to={link.link}>{link.name}</Link>
+            <Link to={link.dropdown ? null : link.link}>{link.name}</Link>
           </li>
         ) : null )}
       </ul>

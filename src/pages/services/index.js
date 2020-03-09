@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby';
 import SEO from '../../components/SEO';
 import Layout from '../../layouts/index';
 
-const Services = (props) => {
+const WhatWeDo = (props) => {
   const services = props.data.allMarkdownRemark.edges;
   return (
     <Layout bodyClass="page-services">
@@ -57,4 +57,4 @@ export const query = graphql`
   }
 `;
 
-export default Services;
+export default WhatWeDo;
