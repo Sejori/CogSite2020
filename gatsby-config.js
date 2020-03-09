@@ -17,6 +17,20 @@ module.exports = {
         name: 'What We Do',
         link: '/what-we-do',
         dropdown: true,
+        dropdownLinks: [
+            {
+                name: "test1",
+                link: "/test1"
+            },
+            {
+                name: "test2",
+                link: "/test2"
+            },
+            {
+                name: "test3",
+                link: "/test3"
+            },
+        ]
       },
       {
         name: 'Case Studies',
