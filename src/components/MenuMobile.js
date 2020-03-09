@@ -1,8 +1,9 @@
 import React from 'react';
-import { graphql, StaticQuery, Link } from 'gatsby';
+import { graphql, StaticQuery, Link, navigate } from 'gatsby';
 
 const MenuMobile = props => {
   const { menuLinks } = props.data.site.siteMetadata;
+  const [dropdown, setDropdown] = React.useState()
   return (
     <div
       id="main-menu-mobile"
@@ -11,7 +12,8 @@ const MenuMobile = props => {
       <ul>
         {menuLinks.map(link => (
           <li key={link.name}>
-            <Link to={link.link}>{link.name}</Link>
+            <div className="link" onClick={() => link.dropdown ? setDropdown(dropdown === link.name ? null : link.name) : navigate(link.link)}>{link.name}</div>
+            {dropdown === link.name && <div className="mobile-dropdown">{link.dropdownLinks.map(ddLink => <Link to={ddLink.link}>{ddLink.name}</Link>)}</div>}
           </li>
         ))}
       </ul>
@@ -28,6 +30,11 @@ export default props => (
             menuLinks {
               name
               link
+              dropdown
+              dropdownLinks {
+                name
+                link
+              }
             }
           }
         }
