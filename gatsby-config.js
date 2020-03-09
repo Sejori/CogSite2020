@@ -19,16 +19,16 @@ module.exports = {
         dropdown: true,
         dropdownLinks: [
             {
-                name: "test1",
-                link: "/test1"
+                name: "For patients and the public",
+                link: "/what-we-do#patients"
             },
             {
-                name: "test2",
-                link: "/test2"
+                name: "For healthcare professionals",
+                link: "/what-we-do#professionals"
             },
             {
-                name: "test3",
-                link: "/test3"
+                name: "For industry",
+                link: "/what-we-do#industry"
             },
         ]
       },
@@ -41,6 +41,20 @@ module.exports = {
         name: 'About',
         link: '/about',
         dropdown: true,
+        dropdownLinks: [
+            {
+                name: "Our story",
+                link: "/about#our-story"
+            },
+            {
+                name: "Meet the team",
+                link: "/about#team"
+            },
+            {
+                name: "Work for us",
+                link: "/about#careers"
+            },
+        ]
       },
       {
         name: 'News',

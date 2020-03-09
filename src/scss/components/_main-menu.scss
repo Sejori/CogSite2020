@@ -24,6 +24,18 @@
       &:last-of-type {
         margin: 0;
       }
+      > .dropdown {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        border: 3px solid $primary;
+        background-color: $primary;
+        color: $white;
+        margin-top: calc(0.5rem - 11px);
+        box-sizing: border-box;
+        padding: 0.5rem;
+        transition: all 225ms ease-in 0s;
+      }
       > .link {
         height: inherit;
         display: inline-block;
@@ -41,6 +53,14 @@
         }
       }
     }
+    li:hover {
+        .dropdown {
+            display: flex;
+        }
+        .link {
+            background: $primary;
+        }
+    }
     > li.active {
       > .link {
         background: $primary;
@@ -50,7 +70,7 @@
           text-decoration: none;
           background: $primary;
           transition: all 225ms ease-in 0s;
-          color: #fff;
+          color: #fff; 
         }
         span {
           display: block;
