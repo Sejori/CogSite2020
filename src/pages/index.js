@@ -16,14 +16,16 @@ const Home = (props) => {
         />
       </Helmet>
       <div className="main"> 
-        <video autoplay muted loop className="video-bg">
-          <source src={require("../images/Pressure.mp4")} type="video/mp4" />
-        </video>
+        <div className="video-bg">
+          {/* <source src={require("../images/Pressure.mp4")} type="video/mp4" /> */}
+        </div>
         <div className="container">
-          <h1>Health information, delivered better.</h1>
-          <p>
-            Using innovative technologies to drive better experiences and outcomes for healthcare.
-          </p>
+            <div className="text-div">
+                <h1>Health information, delivered better.</h1>
+                <p>
+                    Using innovative technologies to drive better experiences and outcomes for healthcare.
+                </p>
+            </div>
         </div>
       </div>
     </Layout>
