@@ -8,11 +8,15 @@ const Menu = (props) => {
   return (
     <div id="main-menu" className="main-menu">
       <ul>
-        {menuLinks.map((link, index) => index < 3 ? (
-          <li key={link.name}>
-            <Link to={link.dropdown ? null : link.link}>{link.name}</Link>
-          </li>
-        ) : null )}
+        {menuLinks.map((link, index) => {
+            if (link.link === "/what-we-do") alert(link.dropdown)
+            return(index < 3 ? (
+                <li key={link.name}>
+                    <Link to={link.dropdown ? null : link.link}>{link.name}</Link>
+                </li>
+            ) : null )
+        })
+        }
       </ul>
       <div className="logo">
           <Link to="/">

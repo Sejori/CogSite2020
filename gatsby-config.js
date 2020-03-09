@@ -11,6 +11,7 @@ module.exports = {
       {
         name: 'Home',
         link: '/',
+        dropdown: false,
       },
       {
         name: 'What We Do',
@@ -20,6 +21,7 @@ module.exports = {
       {
         name: 'Case Studies',
         link: '/case-studies',
+        dropdown: false,
       },
       {
         name: 'About',
@@ -29,10 +31,12 @@ module.exports = {
       {
         name: 'News',
         link: '/news',
+        dropdown: false,
       },
       {
         name: 'Contact',
         link: '/contact',
+        dropdown: false,
       }
     ],
   },
