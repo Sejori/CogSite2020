@@ -15,7 +15,10 @@ const Home = (props) => {
           content="Small Business Theme. Multiple content types using Markdown and JSON sources. Responsive design and SCSS. This is a beautiful and artfully designed starting theme."
         />
       </Helmet>
-      <div className="main">
+      <div className="main"> 
+        <video autoplay muted loop className="video-bg">
+          <source src={require("../images/Pressure.mp4")} type="video/mp4" />
+        </video>
         <div className="container">
           <h1>Health information, delivered better.</h1>
           <p>
