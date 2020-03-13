@@ -5,6 +5,8 @@ import SEO from '../components/SEO';
 import Layout from '../layouts/index';
 import Call from '../components/Call';
 
+import landingVid from "../images/cog_landing_vid.mp4"
+
 const Home = (props) => {
   return (
     <Layout bodyClass="page-home">
@@ -17,7 +19,9 @@ const Home = (props) => {
       </Helmet>
       <div className="main"> 
         <div className="video-bg">
-          {/* <source src={require("../images/Pressure.mp4")} type="video/mp4" /> */}
+          <video controls>
+            <source src={landingVid} type="video/mp4" />
+          </video>
         </div>
         <div className="container">
             <div className="text-div">
