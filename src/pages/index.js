@@ -18,8 +18,8 @@ const Home = (props) => {
         />
       </Helmet>
       <div className="main"> 
-        <div className="video-bg">
-          <video controls>
+        <div className="video-bg-container">
+          <video className="video-bg" autoPlay muted loop>
             <source src={landingVid} type="video/mp4" />
           </video>
         </div>
