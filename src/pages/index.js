@@ -29,6 +29,7 @@ const Home = (props) => {
                 <p>
                     Using innovative technologies to drive better experiences and outcomes for healthcare.
                 </p>
+                <Link to="/what-we-do">What We Do</Link>
             </div>
         </div>
       </div>
