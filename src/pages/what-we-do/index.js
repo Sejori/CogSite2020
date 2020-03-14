@@ -6,13 +6,14 @@ import Layout from '../../layouts/index';
 const WhatWeDo = (props) => {
   const services = props.data.allMarkdownRemark.edges;
   return (
-    <Layout bodyClass="page-services">
-      <SEO title="Services" />
+    <Layout bodyClass="page-what-we-do">
+      <SEO title="What We Do" />
       <div className="intro">
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h1>Services</h1>
+              <h1>What We Do</h1>
+              <p>Cognitant produces visual and interactive health information in 3D for a wide range of audiences, viewable on smartphones, tablets, computers and virtual reality headsets, through our unique platform, <Link to={"/what-we-do#healthinote"}><strong>healthinote.</strong></Link></p>
             </div>
           </div>
         </div>
@@ -25,14 +26,22 @@ const WhatWeDo = (props) => {
               <div className="card service service-teaser">
                 <div className="card-content">
                   <h2>
-                    {edge.node.frontmatter.title}
+                    <Link to={edge.node.frontmatter.path}>{edge.node.frontmatter.title}</Link>
                   </h2>
-                  <p>{edge.node.excerpt}</p>
+                  <p className="service-text">{edge.node.frontmatter.text}</p>
                 </div>
               </div>
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="container">
+        {services.map(edge => (
+            <div>
+                {edge.node.title}
+            </div>
+        ))}
       </div>
     </Layout>
   );
@@ -41,7 +50,7 @@ const WhatWeDo = (props) => {
 export const query = graphql`
   query ServicesQuery {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/services/" } }
+      filter: { fileAbsolutePath: { regex: "/what-we-do/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
@@ -50,6 +59,7 @@ export const query = graphql`
           frontmatter {
             title
             path
+            text
           }
         }
       }
