@@ -32,8 +32,12 @@
             }
             p {
                 color: $secondary;
-                margin-bottom: 0;
+                margin-bottom: 0.5rem;
                 font-size: 20px;
+            }
+            a {
+                text-decoration: underline;
+                font-size: 22px;
             }
         }
     }    

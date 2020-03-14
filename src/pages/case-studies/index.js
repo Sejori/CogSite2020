@@ -3,7 +3,7 @@ import { graphql } from 'gatsby';
 import SEO from '../../components/SEO';
 import Layout from '../../layouts/index';
 
-const Testimonials = (props) => {
+const CaseStudies = (props) => {
   const testimonials = props.data.allMarkdownRemark.edges;
   return (
     <Layout bodyClass="page-testimonials">
@@ -62,4 +62,4 @@ export const query = graphql`
   }
 `;
 
-export default Testimonials;
+export default CaseStudies;
