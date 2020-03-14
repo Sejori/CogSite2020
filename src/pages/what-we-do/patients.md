@@ -3,7 +3,7 @@ path: '/what-we-do#patients'
 title: 'Patients and the public'
 text: 'Empowering with knowledge & enabling informed decisions'
 date: 2018-11-18T12:33:46+10:00
-image: '/images/patients.png'
+featuredImage: patient.jpg
 draft: false
 featured: true
 weight: 2

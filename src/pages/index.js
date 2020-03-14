@@ -19,7 +19,7 @@ const Home = (props) => {
       </Helmet>
       <div className="main"> 
         <div className="video-bg-container">
-          <video className="video-bg" autoPlay muted loop>
+          <video className="video-bg" preload autoPlay muted loop playsInline>
             <source src={landingVid} type="video/mp4" />
           </video>
         </div>

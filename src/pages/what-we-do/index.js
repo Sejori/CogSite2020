@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, graphql } from 'gatsby';
 import SEO from '../../components/SEO';
 import Layout from '../../layouts/index';
+import Img from 'gatsby-image';
 
 const WhatWeDo = (props) => {
   const services = props.data.allMarkdownRemark.edges;
@@ -23,7 +24,7 @@ const WhatWeDo = (props) => {
         <div className="row">
           {services.map(edge => (
             <div key={edge.node.frontmatter.path} className="col-12 col-md-4 mb-1">
-              <div className="card service service-teaser">
+              <div className="card service service-teaser" style={{ backgroundImage: edge.node.frontmatter.image}}>
                 <div className="card-content">
                   <h2>
                     <Link to={edge.node.frontmatter.path}>{edge.node.frontmatter.title}</Link>
@@ -38,7 +39,7 @@ const WhatWeDo = (props) => {
 
       <div className="container">
         {services.map(edge => (
-            <div>
+            <div key={edge.node.frontmatter.path}>
                 {edge.node.title}
             </div>
         ))}
@@ -60,6 +61,13 @@ export const query = graphql`
             title
             path
             text
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 300) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

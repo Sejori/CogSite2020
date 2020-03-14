@@ -3,7 +3,7 @@ path: '/what-we-do#industry'
 title: 'The healthcare industry'
 text: 'Driving better outcomes through trusted engagement anf data-driver insights'
 date: 2018-11-18T12:33:46+10:00
-image: '/images/industry.png'
+featuredImage: industry.jpg
 draft: false
 featured: true
 weight: 2

@@ -3,7 +3,7 @@ path: '/what-we-do#HCPs'
 title: 'Healthcare practitioners and services'
 text: 'Optimising consultation time & facilitating person-centred care'
 date: 2018-11-18T12:33:46+10:00
-image: '/images/HCPs.png'
+featuredImage: professional.jpg
 draft: false
 featured: true
 weight: 2
