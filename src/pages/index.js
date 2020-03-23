@@ -5,7 +5,7 @@ import SEO from '../components/SEO';
 import Layout from '../layouts/index';
 import Call from '../components/Call';
 
-import landingVid from "../images/cog_landing_vid.mp4"
+import landingVid from "../images/cog-landing-vid-desktop-uncompressed.mp4"
 
 const Home = (props) => {
   return (
@@ -19,17 +19,17 @@ const Home = (props) => {
       </Helmet>
       <div className="main"> 
         <div className="video-bg-container">
+          <div className="video-mask">&nbsp;</div>
           <video className="video-bg" preload autoPlay muted loop playsInline>
             <source src={landingVid} type="video/mp4" />
           </video>
         </div>
         <div className="container">
             <div className="text-div">
-                <h1>Health information, delivered better.</h1>
+                <h3>Health information, <Link to="/what-we-do" className="yellow-underline">delivered better</Link>.</h3>
                 <p>
-                    Using innovative technologies to drive better experiences and outcomes for healthcare.
+                    Using <Link to="/what-we-do">innovative technologies</Link> to drive better experiences and outcomes for healthcare.
                 </p>
-                <Link to="/what-we-do">Discover our business</Link>
             </div>
         </div>
       </div>

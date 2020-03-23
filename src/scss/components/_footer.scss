@@ -1,5 +1,5 @@
 .footer-strip {
-  background: #266491;
+  background: $primary;
   padding-top: 20px;
   padding-bottom: 20px;
 }
@@ -12,7 +12,7 @@
   height: 100%;
 }
 .footer {
-  height: 300px;
+  height: 200px;
   @include media-breakpoint-up(sm) {
     justify-content: space-between;
     flex-direction: row;
@@ -23,16 +23,6 @@
     margin: 1rem;
   }
   a {
-    color: white;
-  }
-  .footer-title {
-    color: white;
-    font-size: 2rem;
-    font-family: $font-family-heading;
-    margin-bottom: 10px;
-    flex: 0;
-    @include media-breakpoint-up(sm) {
-      margin: 0;
-    }
+    color: $grey;
   }
 }

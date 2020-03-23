@@ -9,6 +9,14 @@
         width: 100%;
         height: 100%;
         z-index: -1;
+        .video-mask {
+            background-color: rgba($color: #fff, $alpha: 0.4);
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
         .video-bg {
             object-fit: cover;
             width: 100%;
@@ -25,19 +33,29 @@
         .text-div {
             background-color: rgba($color: #fff, $alpha: 0.9);
             text-align: center;
-            padding: 1rem;
+            padding: 1rem 2rem;
             border-radius: 1rem;
-            h1 {
+            h1, h2, h3, h4 {
                 color: $primary;
+                margin: 1rem;
+                a {
+                    text-decoration: underline;
+                    text-decoration-color: $secondary;
+                }
+                a:hover {
+                    color: $primary;
+                    text-decoration-color: $primary;
+                }
             }
             p {
-                color: $secondary;
-                margin-bottom: 0.5rem;
-                font-size: 20px;
-            }
-            a {
-                text-decoration: underline;
+                color: $grey;
+                margin: 1rem auto;
                 font-size: 22px;
+                max-width: 440px;
+                a {
+                    font-size: inherit;
+                    color: $secondary;
+                }
             }
         }
     }    
