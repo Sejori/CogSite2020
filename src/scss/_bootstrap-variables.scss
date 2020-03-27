@@ -32,12 +32,13 @@ $link-hover-decoration: underline;
 $font-family-base: 'Montserrat', 'Open Sans', 'Helvetica Neue', Arial, sans-serif,
   -apple-system;
 $font-family-heading: 'Montserrat', 'Helvetica Neue', Arial, sans-serif, -apple-system;
-$font-size-base: 1rem; // Assumes the browser default, typically `16px`
+$font-size-base: 1.1rem; // Assumes the browser default, typically `16px`
+$font-color-base: $grey;
 $font-weight-thin: 200;
 $font-weight-light: 300;
 $font-weight-normal: 400;
 $font-weight-bold: 700;
-$font-weight-base: $font-weight-normal;
+$font-weight-base: $font-weight-thin;
 $line-height-base: 1.6;
 
 $headings-font-weight: 400;

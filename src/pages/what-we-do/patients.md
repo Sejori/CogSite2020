@@ -1,6 +1,7 @@
 ---
 id: 'patients'
 path: '/what-we-do#patients'
+sectionType: "yellow-section"
 title: 'Patients and the public'
 text: 'Empowering with knowledge & enabling informed decisions'
 date: 2018-11-18T12:33:46+10:00
@@ -24,10 +25,8 @@ weight: 2
 - Non-adherence to medication is as high as 50%
 - Patients remember only half of what is discussed in medical appointments
 - Non-adherence to medication contributes to 200,000 deaths and costs £125bn per year in Europe
-3. In utque Troica pedum caelestia hunc tempto
-4. Gregibus certare tamen turbatque qui
 
-## Healthinote
+# Healthinote
 ### Trusted information recommended by your doctor
 
 We have developed a better way to deliver information to a global audience accustomed to smartphones, games and consuming visual instructions.

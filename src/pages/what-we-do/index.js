@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { Link, graphql, navigate } from 'gatsby';
 import SEO from '../../components/SEO';
 import Layout from '../../layouts/index';
 import Img from 'gatsby-image';
@@ -22,29 +22,28 @@ const WhatWeDo = (props) => {
       </div>
 
       <div className="container pb-6">
-        <div className="row">
+        <div className="row what-we-do-cards">
           {services.map(edge => (
-            <div key={edge.node.frontmatter.path} className="col-12 col-md-4 mb-1">
+            <a href={edge.node.frontmatter.path}key={edge.node.frontmatter.path} className="card col-12 col-md-4 mb-1" onClick={() => navigate(edge.node.frontmatter.path)}>
               <BackgroundImage
                 Tag="section"
-                className="card service service-teaser whatwedo-item"
+                className="what-we-do-card"
                 fluid={edge.node.frontmatter.featuredImage.childImageSharp.fluid}
               >
+                <div className="card-mask">&nbsp;</div>
                 <div className="card-content">
-                  <h2>
-                    <Link to={edge.node.frontmatter.path}>{edge.node.frontmatter.title}</Link>
-                  </h2>
+                  <h4>{edge.node.frontmatter.title}</h4>
                   <p className="service-text">{edge.node.frontmatter.text}</p>
                 </div>
               </BackgroundImage>
-            </div>
+            </a>
           ))}
         </div>
       </div>
 
-      <div className="container">
         {services.map(edge => (
-            <div key={edge.node.frontmatter.path} id={edge.node.frontmatter.id}>
+            <div key={edge.node.frontmatter.path} id={edge.node.frontmatter.id} className={`what-we-do-section ${edge.node.frontmatter.sectionType}`}>
+              <div className="container">
                 <h1>{edge.node.frontmatter.title}</h1>
                 <br/>
                 <div className="blog-post-content"
@@ -53,9 +52,9 @@ const WhatWeDo = (props) => {
                 <br/>
                 <br/>
                 <br/>
+              </div>
             </div>
         ))}
-      </div>
     </Layout>
   );
 };
@@ -71,6 +70,7 @@ export const query = graphql`
           html
           frontmatter {
             id
+            sectionType
             title
             path
             text
