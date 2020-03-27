@@ -22,9 +22,9 @@ const WhatWeDo = (props) => {
       </div>
 
       <div className="container pb-6">
-        <div className="row">
+        <div className="row what-we-do-cards">
           {services.map(edge => (
-            <div key={edge.node.frontmatter.path} className="card col-12 col-md-4 mb-1" onClick={() => navigate(edge.node.frontmatter.path)}>
+            <a href={edge.node.frontmatter.path}key={edge.node.frontmatter.path} className="card col-12 col-md-4 mb-1" onClick={() => navigate(edge.node.frontmatter.path)}>
               <BackgroundImage
                 Tag="section"
                 className="what-we-do-card"
@@ -36,14 +36,14 @@ const WhatWeDo = (props) => {
                   <p className="service-text">{edge.node.frontmatter.text}</p>
                 </div>
               </BackgroundImage>
-            </div>
+            </a>
           ))}
         </div>
       </div>
 
-      <div className="container">
         {services.map(edge => (
-            <div key={edge.node.frontmatter.path} id={edge.node.frontmatter.id}>
+            <div key={edge.node.frontmatter.path} id={edge.node.frontmatter.id} className={`what-we-do-section ${edge.node.frontmatter.sectionType}`}>
+              <div className="container">
                 <h1>{edge.node.frontmatter.title}</h1>
                 <br/>
                 <div className="blog-post-content"
@@ -52,9 +52,9 @@ const WhatWeDo = (props) => {
                 <br/>
                 <br/>
                 <br/>
+              </div>
             </div>
         ))}
-      </div>
     </Layout>
   );
 };
@@ -70,6 +70,7 @@ export const query = graphql`
           html
           frontmatter {
             id
+            sectionType
             title
             path
             text

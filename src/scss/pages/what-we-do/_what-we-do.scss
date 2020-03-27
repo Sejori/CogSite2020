@@ -66,15 +66,19 @@
   }
 }
 
+.what-we-do-cards {
+  justify-content: center;
+}
+
 .card {
   background-clip: inherit;
-  overflow: hidden;
-  padding: 1rem;
   height: 200px;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 0.8rem;
 }
 
 .what-we-do-card {
@@ -83,7 +87,6 @@
   width: 100%;
   height: 100%;
   z-index: 1;
-  cursor: pointer;
 }
 
 .card-mask {
@@ -106,7 +109,7 @@
   height: 100%;
   border-radius: 1rem;
   z-index: 2;
-  margin: 1rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   h4 {
@@ -125,6 +128,25 @@
     transition: all 0.25s ease-in;
     box-shadow: 2px 2px 2px #d7d7d7;
   }
+}
+
+.what-we-do-section {
+  width: 100vw;
+  margin-top: 5rem;
+  h1,h2,h3,h4 { 
+    margin: 2rem 0;
+    color: $primary;
+  }
+  h1 {
+    padding: 1rem;
+    margin: 5rem 1rem 0;
+    text-align: center;
+    color: $primary;
+  }
+}
+
+.yellow-section {
+  background-color: rgba($white, 0.8);
 }
 
 
