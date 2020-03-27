@@ -45,10 +45,11 @@ const WhatWeDo = (props) => {
       <div className="container">
         {services.map(edge => (
             <div key={edge.node.frontmatter.path} id={edge.node.frontmatter.id}>
-                {edge.node.frontmatter.title}
+                <h2>{edge.node.frontmatter.title}</h2>
                 <br/>
-                <br/>
-                <br/>
+                <div className="blog-post-content"
+                  dangerouslySetInnerHTML={{ __html: edge.node.html }}
+                />
                 <br/>
                 <br/>
                 <br/>
@@ -67,7 +68,7 @@ export const query = graphql`
     ) {
       edges {
         node {
-          excerpt
+          html
           frontmatter {
             id
             title

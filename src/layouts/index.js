@@ -5,6 +5,11 @@ import Footer from '../components/Footer'
 import '../scss/style.scss'
 
 const Layout = props => {
+  if (typeof window !== "undefined") {
+    // eslint-disable-next-line global-require
+    require("smooth-scroll")('a[href*="#"]')
+  }
+
   return (
     <React.Fragment>
       <SEO />
