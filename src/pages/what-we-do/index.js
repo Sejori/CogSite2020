@@ -45,7 +45,7 @@ const WhatWeDo = (props) => {
       <div className="container">
         {services.map(edge => (
             <div key={edge.node.frontmatter.path} id={edge.node.frontmatter.id}>
-                <h2>{edge.node.frontmatter.title}</h2>
+                <h1>{edge.node.frontmatter.title}</h1>
                 <br/>
                 <div className="blog-post-content"
                   dangerouslySetInnerHTML={{ __html: edge.node.html }}
