@@ -68,6 +68,9 @@
 @import 'pages/case-studies/page-case-studies';
 @import 'pages/case-studies/case-studies';
 
+#___gatsby {
+    scroll-behavior: smooth;
+}
 
 // Display breakpoints for DEV
 // body:after {

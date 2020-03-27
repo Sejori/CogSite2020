@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { Link, graphql, navigate } from 'gatsby';
 import SEO from '../../components/SEO';
 import Layout from '../../layouts/index';
 import Img from 'gatsby-image';
@@ -24,16 +24,15 @@ const WhatWeDo = (props) => {
       <div className="container pb-6">
         <div className="row">
           {services.map(edge => (
-            <div key={edge.node.frontmatter.path} className="col-12 col-md-4 mb-1">
+            <div key={edge.node.frontmatter.path} className="card col-12 col-md-4 mb-1" onClick={() => navigate(edge.node.frontmatter.path)}>
               <BackgroundImage
                 Tag="section"
-                className="card service service-teaser whatwedo-item"
+                className="what-we-do-card"
                 fluid={edge.node.frontmatter.featuredImage.childImageSharp.fluid}
               >
+                <div className="card-mask">&nbsp;</div>
                 <div className="card-content">
-                  <h2>
-                    <Link to={edge.node.frontmatter.path}>{edge.node.frontmatter.title}</Link>
-                  </h2>
+                  <h4>{edge.node.frontmatter.title}</h4>
                   <p className="service-text">{edge.node.frontmatter.text}</p>
                 </div>
               </BackgroundImage>
