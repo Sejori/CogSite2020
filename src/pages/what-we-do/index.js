@@ -3,6 +3,7 @@ import { Link, graphql } from 'gatsby';
 import SEO from '../../components/SEO';
 import Layout from '../../layouts/index';
 import Img from 'gatsby-image';
+import BackgroundImage from 'gatsby-background-image';
 
 const WhatWeDo = (props) => {
   const services = props.data.allMarkdownRemark.edges;
@@ -24,14 +25,18 @@ const WhatWeDo = (props) => {
         <div className="row">
           {services.map(edge => (
             <div key={edge.node.frontmatter.path} className="col-12 col-md-4 mb-1">
-              <div className="card service service-teaser" style={{ backgroundImage: edge.node.frontmatter.image}}>
+              <BackgroundImage
+                Tag="section"
+                className="card service service-teaser whatwedo-item"
+                fluid={edge.node.frontmatter.featuredImage.childImageSharp.fluid}
+              >
                 <div className="card-content">
                   <h2>
                     <Link to={edge.node.frontmatter.path}>{edge.node.frontmatter.title}</Link>
                   </h2>
                   <p className="service-text">{edge.node.frontmatter.text}</p>
                 </div>
-              </div>
+              </BackgroundImage>
             </div>
           ))}
         </div>
@@ -39,8 +44,14 @@ const WhatWeDo = (props) => {
 
       <div className="container">
         {services.map(edge => (
-            <div key={edge.node.frontmatter.path}>
-                {edge.node.title}
+            <div key={edge.node.frontmatter.path} id={edge.node.frontmatter.id}>
+                {edge.node.frontmatter.title}
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
+                <br/>
             </div>
         ))}
       </div>
@@ -58,6 +69,7 @@ export const query = graphql`
         node {
           excerpt
           frontmatter {
+            id
             title
             path
             text

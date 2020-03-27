@@ -1,4 +1,5 @@
 ---
+id: 'patients'
 path: '/what-we-do#patients'
 title: 'Patients and the public'
 text: 'Empowering with knowledge & enabling informed decisions'
