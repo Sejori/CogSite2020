@@ -1,10 +1,33 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 import SEO from '../../components/SEO';
 import Layout from '../../layouts/index';
+import CogImage from '../../components/CogImage';
+import BackgroundImage from 'gatsby-background-image';
 
 const Team = (props) => {
   const teams = props.data.allMarkdownRemark.edges;
+
+  // const {
+  //   astronaut
+  // } = useStaticQuery(
+  //   graphql`
+  //     query {
+  //       cog: file(relativePath: { eq: "cog.png" }) {
+  //         childImageSharp {
+  //           fluid(quality: 100) {
+  //             ...GatsbyImageSharpFluid_withWebp
+  //           }
+  //         }
+  //       }
+  //     }
+  //   `
+  // )
+
+  // // Watch out for CSS's stacking order, especially when styling the individual
+  // // positions! The lowermost image comes last!
+  // const backgroundCogImage = astronaut.childImageSharp.fluid;
+
   return (
     <Layout bodyClass="page-teams">
       <SEO title="Team" />
@@ -36,6 +59,7 @@ const Team = (props) => {
                           className="img-fluid mb-2"
                           src={edge.node.frontmatter.image}
                         />
+                        <CogImage />
                       </div>
                     )}
                   </div>
@@ -72,7 +96,7 @@ const Team = (props) => {
 export const query = graphql`
   query TeamQuery {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "/team/" } }
+      filter: { fileAbsolutePath: { regex: "/about/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
@@ -85,6 +109,13 @@ export const query = graphql`
             jobtitle
             linkedinurl
             email
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 300) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
