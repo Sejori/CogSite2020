@@ -19,8 +19,13 @@ $grid-gutter-width: 20px;
 $white: #ffffff;
 $grey: #202428;
 $black: #000000;
-$primary: #266491;
-$secondary: #fdb834;
+$lightBlue: #2a89d2;
+$darkBlue: #266491;
+$yellow: #fdb834;
+$orange: #f86e2e;
+
+$primary: $lightBlue;
+$secondary: $yellow;
 
 // Links
 $link-color: $primary;

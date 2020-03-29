@@ -11,32 +11,27 @@ module.exports = {
       {
         name: 'Home',
         link: '/',
-        dropdown: false,
-      },
-      {
-        name: 'What We Do',
-        link: '/what-we-do',
         dropdown: true,
         dropdownLinks: [
             {
                 name: "For patients and the public",
-                link: "/what-we-do#patients"
+                link: "/#patients"
             },
             {
                 name: "For healthcare professionals",
-                link: "/what-we-do#professionals"
+                link: "/#professionals"
             },
             {
                 name: "For industry",
-                link: "/what-we-do#industry"
+                link: "/#industry"
             },
         ]
       },
-      {
-        name: 'Case Studies',
-        link: '/case-studies',
-        dropdown: false,
-      },
+      // {
+      //   name: 'Case Studies',
+      //   link: '/case-studies',
+      //   dropdown: false,
+      // },
       {
         name: 'About',
         link: '/about',

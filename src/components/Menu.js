@@ -10,7 +10,7 @@ const Menu = (props) => {
   return (
     <div id="main-menu" className="main-menu">
       <ul>
-        {menuLinks.map((link, index) => index < 3 ? (
+        {menuLinks.map((link, index) => index < 2 ? (
             <li key={link.name}>
                 <div className="link" 
                     onClick={() => navigate(link.link)}
@@ -27,7 +27,7 @@ const Menu = (props) => {
           </Link>
       </div>
       <ul>
-        {menuLinks.map((link, index) => index > 2 ? (
+        {menuLinks.map((link, index) => index > 1 ? (
           <li key={link.name}>
                 <div className="link" 
                     onClick={() => navigate(link.link)}

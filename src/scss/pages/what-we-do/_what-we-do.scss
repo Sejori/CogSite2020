@@ -109,7 +109,7 @@
   height: 100%;
   border-radius: 1rem;
   z-index: 2;
-  padding: 1rem;
+  padding: 1.5rem 1rem 1rem;
   display: flex;
   flex-direction: column;
   h4 {
@@ -126,26 +126,41 @@
   .what-we-do-card {
     transform: scale(1.02);
     transition: all 0.25s ease-in;
-    box-shadow: 2px 2px 2px #d7d7d7;
+    box-shadow: 0 1px 15px rgba(50, 50, 93, 0.2);
   }
 }
 
 .what-we-do-section {
   width: 100vw;
-  margin-top: 5rem;
+  padding: 0rem 0 3rem;
   h1,h2,h3,h4 { 
     margin: 2rem 0;
     color: $primary;
   }
   h1 {
-    padding: 1rem;
-    margin: 5rem 1rem 0;
+    margin: 0;
+    padding: 5rem 1rem 1rem;
     text-align: center;
+    color: $primary;
+  }
+  p {
+    color: $font-color-base
+  }
+  a {
+    font-weight: $font-weight-normal;
     color: $primary;
   }
 }
 
 .yellow-section {
+  background-color: rgba($yellow, 1);
+}
+
+.white-section {
+  background-color: rgba($white, 1);
+}
+
+.mask-section {
   background-color: rgba($white, 0.8);
 }
 

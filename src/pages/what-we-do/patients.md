@@ -1,7 +1,7 @@
 ---
 id: 'patients'
-path: '/what-we-do#patients'
-sectionType: "yellow-section"
+path: '/#patients'
+sectionType: "mask-section"
 title: 'Patients and the public'
 text: 'Empowering with knowledge & enabling informed decisions'
 date: 2018-11-18T12:33:46+10:00
