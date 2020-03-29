@@ -27,7 +27,7 @@ As we make great strides with the development of novel treatments and therapies,
 - Long-term(chronic) conditions account for 75% of healthcare costs in developed nations
 - 50% of prescribed medication is not taken correctly 
 
-## Cognitant Group delivers
+## Cognitant Group delivers:
 
 Disease awareness programmes | Product specific programmes
 -------------------------|-------------------------

@@ -74,6 +74,11 @@
     font-weight: $font-weight-base;
     font-size: $font-size-base;
     color: $font-color-base;
+    a {
+        svg {
+            display: none;
+        }
+    }
 }
 
 // Display breakpoints for DEV
