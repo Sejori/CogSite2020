@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cognitant Contact Form</title>
+</head>
+<body>
+    <div id="contact">
+        <h4 style="color: #fdb834">Get in touch</h4>
+        <form action="https://contactrequest.cognitant.com/api/contact/" method="POST" id="contactus">
+          <div class="errorBlock"></div>
+          <div class="form-group">
+            <label for="phone">Are you:<span style="color:red">*</span></label>
+            <select name="Are you:">
+              <option value="patient">A patient</option>
+              <option value="hcp">A healthcare professional</option>
+              <option value="fiat">A commissioner</option>
+              <option value="audi">From industry</option>
+              <option value="audi">An investor</option>
+            </select>
+          </div>
+          <div style="display: flex;">
+            <div class="form-group" style="margin-right: 5px;">
+              <label for="Name">Name<span style="color:red">*</span></label>
+              <input type="text" name="name" class="form-control" id="name" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+              <label for="phone">Contact number<span style="color:red">*</span></label>
+              <input type="text" name="phone" class="form-control" id="phone" placeholder="Enter number">
+            </div>
+          </div>
+          <div style="display: flex;">
+            <div class="form-group" style="margin-right: 5px;">
+              <label for="email">Email address<span style="color:red">*</span></label>
+              <input type="text" name="email" class="form-control" id="email" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="Organisation">Organisation</label>
+              <input type="text" name="organisation" class="form-control" id="organisation" placeholder="Enter organisation">
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="Message">Message<span style="color:red">*</span></label>
+            <textarea class="form-control" id="message" name="message" rows="3"></textarea>
+          </div>
+          <div class="form-group cbGroup">
+            <input type="checkbox" name="consent1" value="true" class="form-control" id="Consent1">
+            <label for="Consent1">By entering your information you agree to us retaining your details to send you
+              information on our services/products. We will not share your details with third parties.
+              You can request your details to be removed at any time.</label>
+              <div style="clear: both;"></div>
+          </div>
+          <div class="form-group cbGroup">
+            <input type="checkbox" name="consent2" value="true" class="form-control" id="Consent2">
+            <label for="Consent2">I consent for my information to be used by Cognitant for direct marketing purposes.</label>
+            <div style="clear: both;"></div>
+          </div>
+          <div class="form-group cbGroup">
+            <input type="checkbox" name="consent3" value="true" class="form-control" id="Consent3">
+            <label for="Consent3">I accept the privacy policy for this website described <a href="privacy.html">here</a>.</label>
+            <div style="clear: both;"></div>
+          </div>
+          <div class="form-group">
+            <div class="g-recaptcha" data-sitekey="6LcxLlAUAAAAAA_5P_Jztu2HXjn6_-eR_lliTwEF" id="recaptcha"><div style="width: 304px; height: 50px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=2&amp;k=6LcxLlAUAAAAAA_5P_Jztu2HXjn6_-eR_lliTwEF&amp;co=aHR0cHM6Ly93d3cuY29nbml0YW50LmNvbTo0NDM.&amp;hl=en&amp;v=v1554100419869&amp;size=normal&amp;cb=bp74ur9zlnrr" width="304" height="78" role="presentation" name="a-rshtebrgf7eo" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+</body>
+</html>

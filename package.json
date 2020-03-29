@@ -10,6 +10,7 @@
     "serve": "gatsby serve"
   },
   "dependencies": {
+    "file-saver": "^2.0.2",
     "gatsby": "^2.0.33",
     "gatsby-background-image": "^0.10.2",
     "gatsby-image": "^2.2.43",

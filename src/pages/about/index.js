@@ -1,45 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import SEO from '../../components/SEO';
 import Layout from '../../layouts/index';
 import CogImage from '../../components/CogImage';
+import Img from 'gatsby-image';
 import BackgroundImage from 'gatsby-background-image';
+import linkedIn from '../../images/li_blue.svg'
+import twitter from '../../images/tw_blue.svg'
+import email from '../../images/envelope_blue.svg'
 
 const Team = (props) => {
+  const [displayModal, setDisplayModal] = useState(false)
+  const [modalContent, setModalContent] = useState()
   const teams = props.data.allMarkdownRemark.edges;
-
-  // const {
-  //   astronaut
-  // } = useStaticQuery(
-  //   graphql`
-  //     query {
-  //       cog: file(relativePath: { eq: "cog.png" }) {
-  //         childImageSharp {
-  //           fluid(quality: 100) {
-  //             ...GatsbyImageSharpFluid_withWebp
-  //           }
-  //         }
-  //       }
-  //     }
-  //   `
-  // )
-
-  // // Watch out for CSS's stacking order, especially when styling the individual
-  // // positions! The lowermost image comes last!
-  // const backgroundCogImage = astronaut.childImageSharp.fluid;
 
   return (
     <Layout bodyClass="page-teams">
-      <SEO title="Team" />
-      <div className="intro">
+      <SEO title="About" />
+      <BackgroundImage
+        tag="our-story-section"
+        fluid={props.data.bgImage.childImageSharp.fluid}
+      >
+        <div className="our-story-mask">&nbsp;</div>
+        <div className="intro" id="our-story">
+          <div className="container">
+            <div className="row">
+              <div className="col-12">
+                <h1>Our Story</h1>
+                <p>
+                  Founded in Oxford, UK, in 2018, Cognitant is the brainchild of four experienced healthcare professionals: chief technology officer Rick Knowles, Clinical Director Dr Juhi Tandon, chief operating officer Daisy Allington, and chief executive officer Dr Tim Ringrose, previously a kidney specialist at Oxford University Hospital.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </BackgroundImage>
+
+      <div className="intro" id="team">
         <div className="container">
           <div className="row">
             <div className="col-12">
               <h1>Meet The Team</h1>
-              <p>
-                Our team of qualified accountants and financial consultants can help your business
-                at any stage of it’s growth.
-              </p>
             </div>
           </div>
         </div>
@@ -54,12 +55,7 @@ const Team = (props) => {
                   <div className="card-header-left">
                     {edge.node.frontmatter.image && (
                       <div className="card-image">
-                        <img
-                          alt={edge.node.frontmatter.title}
-                          className="img-fluid mb-2"
-                          src={edge.node.frontmatter.image}
-                        />
-                        <CogImage />
+                        <CogImage src={edge.node.frontmatter.image.childImageSharp.fluid} alt={edge.node.frontmatter.title} className="cog-image"/>
                       </div>
                     )}
                   </div>
@@ -70,24 +66,38 @@ const Team = (props) => {
                         <strong>{edge.node.frontmatter.jobtitle}</strong>
                       </li>
                       <li>
-                        <a target="_blank" href={edge.node.frontmatter.linkedinurl}>
-                          {edge.node.frontmatter.linkedinurl}
-                        </a>
+                        {edge.node.frontmatter.linkedinurl && <a target="_blank" href={edge.node.frontmatter.linkedinurl}>
+                          <img src={linkedIn} className="icon" alt="LinkedIn" />
+                        </a>}
+                        {edge.node.frontmatter.twitterurl && <a target="_blank" href={edge.node.frontmatter.twitterurl}>
+                          <img src={twitter} className="icon" alt="Twitter" />
+                        </a>}
+                        {edge.node.frontmatter.email && <a href={edge.node.frontmatter.email}>
+                          <img src={email} className="icon" alt="Email" />
+                        </a>}
                       </li>
-                      <li>
-                        <a href={edge.node.frontmatter.email}>{edge.node.frontmatter.email}</a>
+                      <li onClick={() => {
+                        setModalContent(edge.node.html)
+                        setDisplayModal(edge.node.frontmatter.title)
+                      }} className="more-link">
+                        more...
                       </li>
                     </ul>
                   </div>
                 </div>
-                <div
-                  className="team-content"
-                  dangerouslySetInnerHTML={{ __html: edge.node.html }}
-                />
               </div>
             </div>
           ))}
         </div>
+      </div>
+
+      <div className="team-modal" style={{ display: displayModal ? "flex" : "none" }}>
+          <div className="modal-content">
+            <div className="modal-close" onClick={() => setDisplayModal(false)}>X</div>
+            <h4>{displayModal}</h4>
+            <hr/>
+            <div className="modal-text" dangerouslySetInnerHTML={{__html: modalContent}}></div>
+          </div>
       </div>
     </Layout>
   );
@@ -95,6 +105,13 @@ const Team = (props) => {
 
 export const query = graphql`
   query TeamQuery {
+    bgImage: file(relativePath: { eq: "oxford.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 1080) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
     allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "/about/" } }
       sort: { fields: [frontmatter___date], order: DESC }
@@ -104,14 +121,12 @@ export const query = graphql`
           html
           frontmatter {
             title
-            path
-            image
             jobtitle
             linkedinurl
-            email
-            featuredImage {
+            twitterurl
+            image {
               childImageSharp {
-                fluid(maxWidth: 300) {
+                fluid(maxWidth: 1080) {
                   ...GatsbyImageSharpFluid
                 }
               }

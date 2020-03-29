@@ -2,6 +2,7 @@
   height: inherit;
   align-self: center;
   display: none;
+  z-index: 999;
   @include media-breakpoint-up(lg) {
     display: flex;
     align-items: flex-end;
@@ -24,6 +25,7 @@
       &:last-of-type {
         margin: 0;
       }
+      cursor: pointer;
       > .dropdown {
         display: none;
         flex-direction: column;

@@ -45,10 +45,10 @@ module.exports = {
                 name: "Meet the team",
                 link: "/about#team"
             },
-            {
-                name: "Work for us",
-                link: "/about#careers"
-            },
+            // {
+            //     name: "Work for us",
+            //     link: "/about#careers"
+            // },
         ]
       },
       {
@@ -64,10 +64,8 @@ module.exports = {
     ],
   },
   plugins: [
-    'gatsby-plugin-sass',
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    'gatsby-transformer-json',
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -104,5 +102,7 @@ module.exports = {
         head: false,
       },
     },
+    'gatsby-transformer-json',
+    'gatsby-plugin-sass',
   ],
 };

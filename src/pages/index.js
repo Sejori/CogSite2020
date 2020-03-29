@@ -17,7 +17,7 @@ const WhatWeDo = (props) => {
   return (
     <Layout bodyClass="page-home">
       <SEO title="Home" />
-      <div className="intro">
+      <div className="intro landing-intro">
         <div className="video-bg-container">
           <div className="video-mask">&nbsp;</div>
           <video className="video-bg" preload autoPlay muted loop playsInline>
@@ -75,7 +75,7 @@ const WhatWeDo = (props) => {
 export const query = graphql`
   query ServicesQuery {
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "./what-we-do/" } }
+      filter: { fileAbsolutePath: { regex: "/what-we-do/" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
