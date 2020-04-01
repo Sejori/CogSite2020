@@ -34,7 +34,7 @@ const Image = ({ src, alt }) => {
                 className="what-we-do-card cog-image"
                 fluid={data.placeholderImage.childImageSharp.fluid}
               >
-      <img src={src.src} alt={alt} className="cog-image-inner" />
+      <img src={require("../images/" + src)} alt={alt} className="cog-image-inner" />
     </BackgroundImage>
   )
 }

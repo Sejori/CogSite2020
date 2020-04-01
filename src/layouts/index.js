@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import SEO from '../components/SEO'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -18,6 +19,9 @@ const Layout = props => {
           <Header />
           {props.children}
         </div>
+        <Link id="back-to-top" to={(typeof window != "undefined") ? window.location.pathname : "/"} className="inactive">
+          <strong>top ^</strong>
+        </Link>
         <Footer />
       </div>
     </React.Fragment>

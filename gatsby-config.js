@@ -19,7 +19,7 @@ module.exports = {
             },
             {
                 name: "For healthcare professionals",
-                link: "/#professionals"
+                link: "/#HCPs"
             },
             {
                 name: "For industry",
@@ -94,15 +94,24 @@ module.exports = {
         name: 'images',
       },
     },
-    {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: guid ? guid : 'UA-116709596-1',
-        // Puts tracking script in the head instead of the body
-        head: false,
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-google-analytics',
+    //   options: {
+    //     trackingId: guid ? guid : 'UA-116709596-1',
+    //     // Puts tracking script in the head instead of the body
+    //     head: false,
+    //   },
+    // },
     'gatsby-transformer-json',
     'gatsby-plugin-sass',
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `montserrat\:200,300,400,400` // you can also specify font weights and styles
+        ],
+        display: 'swap'
+      }
+    }
   ],
 };

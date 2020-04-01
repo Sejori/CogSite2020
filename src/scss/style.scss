@@ -81,6 +81,25 @@
             display: none;
         }
     }
+    td {
+        padding-right: 1rem;
+    }
+    #back-to-top {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        margin: 2rem;
+        background-color: $white;
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        z-index: 999;
+    }
+    .active {
+        display: block;
+    }
+    .inactive {
+        display: none;
+    }
 }
 
 // Display breakpoints for DEV

@@ -10,7 +10,7 @@ const Contact = props => (
       <div className="container">
         <div className="row">
           <div className="col-12">
-            <h1>Want to find out more?</h1>
+            <h2>Want to find out more?</h2>
             <h3>We'd love to hear from you.</h3>
           </div>
         </div>

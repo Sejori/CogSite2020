@@ -28,7 +28,7 @@ class Header extends React.Component {
               <img alt="Cognitant" src={logoMobile} />
             </Link>
           </div>
-          <MenuMobile active={this.state.menuActive} />
+          <MenuMobile active={this.state.menuActive} toggleMenu={this.toggleMenu}/>
           <Menu />
           <Hamburger toggleMenu={this.toggleMenu} />
         </div>

@@ -4,8 +4,8 @@ date: 2020-03-29
 draft: false
 image: 'tim.jpg'
 jobtitle: 'Chief Executive Officer and Founder'
-linkedinurl: 'www.linkedin.com/in/timringrose/'
-twitterurl: 'twitter.com/timringrose'
+linkedinurl: 'https://www.linkedin.com/in/timringrose/'
+twitterurl: 'https://twitter.com/timringrose'
 weight: 1
 ---
 

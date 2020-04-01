@@ -27,10 +27,12 @@ weight: 2
 - Non-adherence to medication contributes to 200,000 deaths and costs £125bn per year in Europe
 
 # Healthinote
-### Trusted information recommended by your doctor
 
-We have developed a better way to deliver information to a global audience accustomed to smartphones, games and consuming visual instructions.
-Modernising the way information is used to provide insight, education and support.
- 
-We use new and emerging technologies to deliver information in usable and accessible formats; it improves understanding and enables better decisions.
-Immersive and interactive visual content drives a better understanding of health, disease and treatment.
+<div class="row">
+    <img id="healthinote-img" alt="healthinote" src="">
+    <div class="healthinote-desc">
+        <h2>Trusted information recommended by your doctor</h2>
+        <p>We have developed a better way to deliver information to a global audience accustomed to smartphones, games and consuming visual instructions. Modernising the way information is used to provide insight, education and support.</p>
+        <p>We use new and emerging technologies to deliver information in usable and accessible formats; it improves understanding and enables better decisions. Immersive and interactive visual content drives a better understanding of health, disease and treatment.</p>
+    </div>
+</div>

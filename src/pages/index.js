@@ -13,6 +13,12 @@ const WhatWeDo = (props) => {
     bgVideo = landingVidMobile
   } else bgVideo = landingVid
 
+  useEffect(() => {
+    if (typeof window === "undefined") return
+    let healthinoteImg = document.querySelector("#healthinote-img")
+    healthinoteImg.src = require("../images/healthinote.png")
+  }, [])
+
   const services = props.data.allMarkdownRemark.edges;
   return (
     <Layout bodyClass="page-home">

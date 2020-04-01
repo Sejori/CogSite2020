@@ -15,7 +15,7 @@ const Team = (props) => {
   const teams = props.data.allMarkdownRemark.edges;
 
   return (
-    <Layout bodyClass="page-teams">
+    <Layout bodyClass="page-about">
       <SEO title="About" />
       <BackgroundImage
         tag="our-story-section"
@@ -26,10 +26,12 @@ const Team = (props) => {
           <div className="container">
             <div className="row">
               <div className="col-12">
-                <h1>Our Story</h1>
-                <p>
-                  Founded in Oxford, UK, in 2018, Cognitant is the brainchild of four experienced healthcare professionals: chief technology officer Rick Knowles, Clinical Director Dr Juhi Tandon, chief operating officer Daisy Allington, and chief executive officer Dr Tim Ringrose, previously a kidney specialist at Oxford University Hospital.
-                </p>
+                <div className="text-background">
+                  <h1>Our story</h1>
+                  <p>
+                    Founded in Oxford, UK, in 2018, Cognitant is the brainchild of four experienced healthcare professionals: Chief Technology Officer Rick Knowles, Clinical Director Dr Juhi Tandon, Chief Operating Officer Daisy Allington, and Chief Executive Officer Dr Tim Ringrose, previously a kidney specialist at Oxford University Hospital.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -55,7 +57,7 @@ const Team = (props) => {
                   <div className="card-header-left">
                     {edge.node.frontmatter.image && (
                       <div className="card-image">
-                        <CogImage src={edge.node.frontmatter.image.childImageSharp.fluid} alt={edge.node.frontmatter.title} className="cog-image"/>
+                        <CogImage src={edge.node.frontmatter.image} alt={edge.node.frontmatter.title} className="cog-image"/>
                       </div>
                     )}
                   </div>
@@ -124,13 +126,7 @@ export const query = graphql`
             jobtitle
             linkedinurl
             twitterurl
-            image {
-              childImageSharp {
-                fluid(maxWidth: 1080) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
+            image
           }
         }
       }

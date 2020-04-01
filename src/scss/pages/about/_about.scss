@@ -51,12 +51,14 @@
     align-items: center;
     justify-content: center;
     z-index: 1;
-    background-color: rgba($white, 0.5);
+    background-color: rgba($white, 0.3);
     .modal-content {
         background-color: $white;
         padding: 1rem;
         border-radius: 1rem;
         max-width: 400px;
+        max-height: 500px;
+        overflow-y: scroll;
         margin: 1rem;
         z-index: 2;
         box-shadow: 0 1px 15px rgba(50, 50, 93, 0.2);
@@ -75,15 +77,39 @@
     }
 }
 
-#our-story {
-    height: calc(100vh - 65px)
-}
-
-.our-story-mask {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba($white, 0.8);
+.page-about {
+    #our-story {
+        height: calc(100vh - 65px)
+    }
+    .our-story-mask {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba($darkBlue, 0.4);
+    }
+    .intro {
+        .text-background {
+            h1, p {
+                z-index: 2 !important;
+                width: unset !important;
+            }
+            background-color: rgba($white, 0.9);
+            padding: 1rem;
+            margin: 1rem;
+            border-radius: 1rem;
+            z-index: 0;
+            width: 80%;
+            @include media-breakpoint-up(sm) {
+                width: 70%;
+            }
+            @include media-breakpoint-up(md) {
+                width: 60%;
+            }
+            @include media-breakpoint-up(lg) {
+                width: 40%;
+            }
+        }
+    }
 }

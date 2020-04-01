@@ -4,8 +4,8 @@ date: 2020-03-28
 draft: false
 image: 'daisy.jpg'
 jobtitle: 'Chief Operating Officer and Founder'
-linkedinurl: 'www.linkedin.com/in/daisy-allington-8656578/'
-twitterurl: 'twitter.com/daisy_allington'
+linkedinurl: 'https://www.linkedin.com/in/daisy-allington-8656578/'
+twitterurl: 'https://twitter.com/daisy_allington'
 weight: 2
 ---
 

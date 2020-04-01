@@ -15,10 +15,10 @@ const News = () => {
               <ul>
                 <li>
                   <h4>
-                    COGNITANT GROUP TO LAUNCH HEALTHINOTE APP WITH VERIFIED NHS CORONAVIRUS GUIDANCE
+                  COGNITANT GROUP LAUNCHES HEALTHINOTE APP WITH VERIFIED NHS CORONAVIRUS GUIDANCE
                   </h4>
                   <p>24th March 2020</p>
-                  <a target="_blank" href={require('../../images/Healthinote_update_release_March2020.pdf')}>Download</a>
+                  <a target="_blank" href={require('../../images/Healthinote_release_March2020.pdf')}>Download</a>
                 </li>
                 <li>
                   <h4>
