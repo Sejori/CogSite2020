@@ -11,32 +11,27 @@ module.exports = {
       {
         name: 'Home',
         link: '/',
-        dropdown: false,
-      },
-      {
-        name: 'What We Do',
-        link: '/what-we-do',
         dropdown: true,
         dropdownLinks: [
             {
                 name: "For patients and the public",
-                link: "/what-we-do#patients"
+                link: "/#patients"
             },
             {
                 name: "For healthcare professionals",
-                link: "/what-we-do#professionals"
+                link: "/#HCPs"
             },
             {
                 name: "For industry",
-                link: "/what-we-do#industry"
+                link: "/#industry"
             },
         ]
       },
-      {
-        name: 'Case Studies',
-        link: '/case-studies',
-        dropdown: false,
-      },
+      // {
+      //   name: 'Case Studies',
+      //   link: '/case-studies',
+      //   dropdown: false,
+      // },
       {
         name: 'About',
         link: '/about',
@@ -50,10 +45,10 @@ module.exports = {
                 name: "Meet the team",
                 link: "/about#team"
             },
-            {
-                name: "Work for us",
-                link: "/about#careers"
-            },
+            // {
+            //     name: "Work for us",
+            //     link: "/about#careers"
+            // },
         ]
       },
       {
@@ -69,10 +64,8 @@ module.exports = {
     ],
   },
   plugins: [
-    'gatsby-plugin-sass',
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    'gatsby-transformer-json',
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -101,13 +94,24 @@ module.exports = {
         name: 'images',
       },
     },
+    // {
+    //   resolve: 'gatsby-plugin-google-analytics',
+    //   options: {
+    //     trackingId: guid ? guid : 'UA-116709596-1',
+    //     // Puts tracking script in the head instead of the body
+    //     head: false,
+    //   },
+    // },
+    'gatsby-transformer-json',
+    'gatsby-plugin-sass',
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
-        trackingId: guid ? guid : 'UA-116709596-1',
-        // Puts tracking script in the head instead of the body
-        head: false,
-      },
-    },
+        fonts: [
+          `montserrat\:200,300,400,400` // you can also specify font weights and styles
+        ],
+        display: 'swap'
+      }
+    }
   ],
 };

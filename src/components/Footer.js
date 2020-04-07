@@ -17,7 +17,7 @@ const Footer = props => (
         </a>
       </div>
       <div className="copyright">
-        ©{' '}{new Date().getFullYear()}{' '}{props.data.site.siteMetadata.title} | <Link to="privacy">Privacy policy</Link> | Registered No. <a href="https://beta.companieshouse.gov.uk/company/11282547">11282547</a>
+        ©{' '}{new Date().getFullYear()}{' '}{props.data.site.siteMetadata.title} | <Link to="/privacy.html">Privacy policy</Link> | Registered No. <a href="https://beta.companieshouse.gov.uk/company/11282547">11282547</a>
       </div>
     </div>
   </div>
