@@ -17,6 +17,8 @@ const WhatWeDo = (props) => {
     if (typeof window === "undefined") return
     let healthinoteImg = document.querySelector("#healthinote-img")
     healthinoteImg.src = require("../images/healthinote.png")
+    let patientsImg = document.querySelector("#patients-img")
+    patientsImg.src = require("../images/cog-quotes.png")
   }, [])
 
   const services = props.data.allMarkdownRemark.edges;
@@ -40,7 +42,7 @@ const WhatWeDo = (props) => {
       </div>
 
       <div className="container pb-6">
-      <p>Cognitant produces visual and interactive health information in 3D for a wide range of audiences, viewable on smartphones, tablets, computers and virtual reality headsets, through our unique platform, <Link to={"/#healthinote"}><strong>healthinote.</strong></Link></p>
+        <p>Cognitant produces visual and interactive health information in 3D for a wide range of audiences, viewable on smartphones, tablets, computers and virtual reality headsets, through our unique platform, <Link to={"/#healthinote"}><strong>healthinote.</strong></Link></p>
         <div className="row what-we-do-cards">
           {services.map(edge => (
             <Link to={edge.node.frontmatter.path}key={edge.node.frontmatter.path} className="card col-12 col-md-4 mb-1">
@@ -60,20 +62,20 @@ const WhatWeDo = (props) => {
         </div>
       </div>
 
-        {services.map(edge => (
-            <div key={edge.node.frontmatter.path} id={edge.node.frontmatter.id} className={`what-we-do-section ${edge.node.frontmatter.sectionType}`}>
-              <div className="container">
-                <h1>{edge.node.frontmatter.title}</h1>
-                <br/>
-                <div className="blog-post-content"
-                  dangerouslySetInnerHTML={{ __html: edge.node.html }}
-                />
-                <br/>
-                <br/>
-                <br/>
-              </div>
+      {services.map(edge => (
+          <div key={edge.node.frontmatter.path} id={edge.node.frontmatter.id} className={`what-we-do-section ${edge.node.frontmatter.sectionType}`}>
+            <div className="container">
+              <h1>{edge.node.frontmatter.title}</h1>
+              <br/>
+              <div className="blog-post-content"
+                dangerouslySetInnerHTML={{ __html: edge.node.html }}
+              />
+              <br/>
+              <br/>
+              <br/>
             </div>
-        ))}
+          </div>
+      ))}
     </Layout>
   );
 };

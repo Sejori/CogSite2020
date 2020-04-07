@@ -4,7 +4,7 @@ path: '/#industry'
 sectionType: "mask-section"
 title: 'The healthcare industry'
 text: 'Driving better outcomes through trusted engagement & data-driven insights'
-date: 2018-11-18T12:33:46+10:00
+date: 2020-03-28
 featuredImage: industry.jpg
 draft: false
 featured: true

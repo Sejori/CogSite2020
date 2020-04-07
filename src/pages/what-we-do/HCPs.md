@@ -4,7 +4,7 @@ path: '/#HCPs'
 sectionType: "mask-section"
 title: 'Healthcare practitioners and services'
 text: 'Optimising consultation time & facilitating person-centred care'
-date: 2018-11-18T12:33:46+10:00
+date: 2020-03-27
 featuredImage: professional.jpg
 draft: false
 featured: true

@@ -19,7 +19,7 @@ const Layout = props => {
           <Header />
           {props.children}
         </div>
-        <Link id="back-to-top" to={(typeof window != "undefined") ? window.location.pathname : "/"} className="inactive">
+        <Link id="back-to-top" to={(typeof window != "undefined") ? window.location.pathname + "#" : "/#"} className="inactive">
           <strong>top ^</strong>
         </Link>
         <Footer />
