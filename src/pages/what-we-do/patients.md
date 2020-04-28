@@ -34,6 +34,20 @@ weight: 2
     <img id="healthinote-img" alt="healthinote" src="">
     <div class="healthinote-desc">
         <h2>Trusted information recommended by your doctor</h2>
+        <div id="stores">
+            <ul id="app-store-links">
+                <li>
+                    <a href="https://play.google.com/store/apps/details?id=com.healthinote.app">
+                        <img id="google" src="" border="0"/>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://apps.apple.com/us/app/healthinote/id1449132966">
+                        <img id="apple" src="" border="0"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
         <p>We have developed a better way to deliver information to a global audience accustomed to smartphones, games and consuming visual instructions. Modernising the way information is used to provide insight, education and support.</p>
         <p>We use new and emerging technologies to deliver information in usable and accessible formats; it improves understanding and enables better decisions. Immersive and interactive visual content drives a better understanding of health, disease and treatment.</p>
     </div>

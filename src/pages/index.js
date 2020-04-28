@@ -19,6 +19,10 @@ const WhatWeDo = (props) => {
     healthinoteImg.src = require("../images/healthinote.png")
     let patientsImg = document.querySelector("#patients-img")
     patientsImg.src = require("../images/cog-quotes.png")
+    let googleImg = document.querySelector("#google")
+    googleImg.src = require("../images/google.svg")
+    let appleImg = document.querySelector("#apple")
+    appleImg.src = require("../images/apple.svg")
   }, [])
 
   const services = props.data.allMarkdownRemark.edges;

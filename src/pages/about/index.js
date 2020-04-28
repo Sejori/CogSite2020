@@ -79,6 +79,7 @@ const Team = (props) => {
                         </a>}
                       </li>
                       <li onClick={() => {
+                        if (typeof window !== "undefined") document.body.style.overflow = "hidden"
                         setModalContent(edge.node.html)
                         setDisplayModal(edge.node.frontmatter.title)
                       }} className="more-link">
@@ -93,9 +94,15 @@ const Team = (props) => {
         </div>
       </div>
 
-      <div className="team-modal" style={{ display: displayModal ? "flex" : "none" }}>
+      <div className="team-modal" style={{ display: displayModal ? "flex" : "none" }} onClick={() => {
+        if (typeof window !== "undefined") document.body.style.overflow = "unset"
+        setDisplayModal(false)
+      }}>
           <div className="modal-content">
-            <div className="modal-close" onClick={() => setDisplayModal(false)}>X</div>
+            <div className="modal-close" onClick={() => {
+              if (typeof window !== "undefined") document.body.style.overflow = "unset"
+              setDisplayModal(false)
+            }}>X</div>
             <h4>{displayModal}</h4>
             <hr/>
             <div className="modal-text" dangerouslySetInnerHTML={{__html: modalContent}}></div>
