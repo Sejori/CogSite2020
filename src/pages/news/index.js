@@ -27,6 +27,13 @@ const News = () => {
                   <p>10th December 2019</p>
                   <a target="_blank" href={require('../../images/Cognitant_Year_Review_Dec19.pdf')}>Download</a>
                 </li>
+                <li>
+                  <h4>
+                    WHITE PAPER: THE PATIENT EXPERIENCE POST COVID-19
+                  </h4>
+                  <p>May 2019</p>
+                  <a target="_blank" href={require('../../images/whitepaper-2020final.pdf')}>Download</a>
+                </li>
               </ul>
             </div>
           </div>

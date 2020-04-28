@@ -63,7 +63,7 @@
 }
 
 .what-we-do-section {
-  width: 100vw;
+  width: 100%;
   padding: 0rem 0 3rem;
   h1,h2,h3,h4 { 
     margin: 2rem 0;
@@ -95,7 +95,7 @@
 .mask-section {
   background-color: rgba($white, 0.9);
   img {
-    margin: 2rem auto;
+    margin: auto auto;
     height: 400px;
   }
   .healthinote-desc {
@@ -108,5 +108,20 @@
   li {
     font-size: $font-size-base !important;
   }
+}
+
+#app-store-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 2rem;
+}
+#app-store-links img {
+  height: 60px;
+  margin: 10px;
 }
 
