@@ -1,0 +1,92 @@
+
+#privacy-header {
+  padding-top: 5px;
+  background-color: #fdb834;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+  box-shadow: 0px 2px 3px #888;
+  color: #444;
+}
+#privacy-header .header-row { display: flex; align-items: center; height: 60px; }
+#privacy-header .header-row .leaf { height: 60px; align-self: flex-end; }
+#privacy-header .header-row .header-title img { height: 10vw; height: 35px; }
+#privacy-header .header-row h2 { padding-top: 0.75vw; font-size: 16px; }
+#privacy-header .header-title { transform: translateX(-30px); margin-left: auto; margin-right: auto; display: flex; flex-direction: column; align-items: center; }
+
+.privacy-footer {
+  width: 100%;
+  z-index: 1;
+  padding: 20px 0;
+  background-color: #333;
+  text-align: center;
+}
+.privacy-footer h3 {
+	color: #ffffff;
+	font-size: 17px;
+	font-weight: 300;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	line-height: 1.3em;
+}
+.privacy-footer p {
+	color: #ffffff;
+	font-size: 13px;
+	font-weight: 300;
+	margin: 0;
+	line-height: 1.3em;
+  text-align: center;
+}
+.privacy-footer a.email:link, .footer a.email:visited, .footer a.email:active {
+	color: #fdb834;
+	font-size: 17px;
+	font-weight: 600;
+	transition: all 0.5s ease;
+	margin-bottom: 10px;
+}
+.privacy-footer a.email:hover, .footer a.email:visited:hover, .footer a.email:focus {
+	text-decoration: underline;
+	outline: 0 none;
+	color: #fdb834;
+	transition: all 0.5s ease;
+}
+.privacy-footer hr {
+  border-top: 1px solid #fff;
+	width: 130px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	opacity: 0.15
+}
+.privacy-footer .li {
+	width: 28px;
+	height: 27px;
+	margin-right: 5px;
+	display: inline-block;
+}
+.privacy-footer .tw {
+	width: 31px;
+	height: 27px;
+	margin-left: 5px;
+	display: inline-block;
+}
+.privacy-footer .social-media .li:hover, .footer .social-media .tw:hover {
+	opacity: 0.5;
+	color: #333;
+	cursor: pointer;
+	text-decoration: none;
+}
+.privacy-footer .social-media {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#privacy { padding-top: 5rem; }
+#privacy * { color: #444 }
+#privacy li { text-align: left; }
+#privacy h3 { padding: 20px; }
+
+#googleBtn img {width:270px; margin: 10px;}
+#appleBtn img {width:270px; margin: 10px;}
