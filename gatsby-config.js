@@ -42,6 +42,10 @@ module.exports = {
                 link: "/about#our-story"
             },
             {
+              name: "The healthinote story",
+              link: "/about#the-healthinote-story"
+          },
+            {
                 name: "Meet the team",
                 link: "/about#team"
             },

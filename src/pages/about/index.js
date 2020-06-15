@@ -38,6 +38,57 @@ const Team = (props) => {
         </div>
       </BackgroundImage>
 
+      <div className="intro" id="the-healthinote-story">
+        <div className="container">
+          <h1>The healthinote story</h1>
+        </div>
+      </div>
+
+      <div className="container about-section">
+        <p>
+          Our healthinote service for information prescriptions was inspired by our discussions with patients and clinicians. 
+          At the early stages of the company when we were building and testing immersive experiences about health we realised that 
+          there was a need for a system for patients and the public to receive recommended health information from a health professional. 
+          We used a rapid product design process to build and test a basic prototype with users then set out a product development plan to 
+          build our version 1 product. (we adapted a process outlined by Jake Knapp in his book “<a href="https://www.thesprintbook.com/">Sprint</a>” 
+          it’s a great way to do rapid prototyping).
+        </p>
+        <p>
+          We learned a lot when we tested our first version with a range of people from different backgrounds and ages (some with long term conditions). We had positive comments:
+        </p>
+        <p className="quote">
+          “It’s a really good idea, having tailored information just for you. I’d use it if I was considering a new treatment – especially one where there’s a lot to think about.”
+          “I like that it tells you to talk to an HCP. That’s important and it makes
+          me trust it more.”
+        </p>
+        <p className="quote">
+          “It’s professional but it’s also fun because of how it’s presented.”
+        </p>
+        <p>
+          But we also learned a lot from some of the comments:
+        </p>
+        <p className="quote">
+          “I think it’s a bit too abstract…make it more relatable”
+        </p>
+        <p className="quote">
+          “The video is way too long and repetitive. I find it a bit confusing”
+        </p>
+        <p className="quote">
+          “It’s way too slow.”
+        </p>
+        <p className="quote">
+          “It’s not obvious that you can click on that”
+        </p>
+        <p>
+          We’ve updated and amended the apps based on user testing and feedback and also added new features suggested by users – both healthcare professionals and patients – and we continue to do that.
+        </p>
+        <p>
+          You can see the look of the app has changed quite a lot since our first prototype:
+        </p>
+
+        <p>If you would like to help us with user testing please get in touch! <a href="mailto:hello@cognitant.com">hello@cognitant.com</a></p>
+      </div>
+
       <div className="intro" id="team">
         <div className="container">
           <div className="row">

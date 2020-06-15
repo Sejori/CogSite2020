@@ -50,5 +50,6 @@ weight: 2
         </div>
         <p>We have developed a better way to deliver information to a global audience accustomed to smartphones, games and consuming visual instructions. Modernising the way information is used to provide insight, education and support.</p>
         <p>We use new and emerging technologies to deliver information in usable and accessible formats; it improves understanding and enables better decisions. Immersive and interactive visual content drives a better understanding of health, disease and treatment.</p>
+        <p><a href="/about#the-healthinote-story">Read the healthinote story</a></p>
     </div>
 </div>

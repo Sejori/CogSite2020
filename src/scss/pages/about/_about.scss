@@ -91,6 +91,9 @@
     }
     .intro {
         .text-background {
+            h1 {
+                margin: 1.5rem 0;
+            }
             h1, p {
                 z-index: 2 !important;
                 width: unset !important;
@@ -112,4 +115,14 @@
             }
         }
     }
+}
+
+.about-section p {
+    color: #202428;
+}
+
+.quote {
+    color: #4c555e;
+    font-style: italic;
+    font-size: 1rem;
 }
