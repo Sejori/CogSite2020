@@ -85,7 +85,16 @@ const Team = (props) => {
         <p>
           You can see the look of the app has changed quite a lot since our first prototype:
         </p>
-
+        <div style={{ display: "flex", justifyContent: "space-around", alignItems: "flex-start", flexWrap: "wrap" }}>
+          <div style={{ width: "30%", minWidth: "200px", margin: "0 1rem" }}>
+            <Img fluid={props.data.healthinoteOld.childImageSharp.fluid} style={{ width: "100%" }} />
+            <p style={{ textAlign: "center" }}><strong>Prototype</strong></p>
+          </div>
+          <div style={{ width: "30%", minWidth: "200px", margin: "0 1rem" }}>
+            <Img fluid={props.data.healthinoteNew.childImageSharp.fluid} style={{ width: "100%" }} />
+            <p style={{ textAlign: "center" }}><strong>V1.0</strong></p>
+          </div>
+        </div>
         <p>If you would like to help us with user testing please get in touch! <a href="mailto:hello@cognitant.com">hello@cognitant.com</a></p>
       </div>
 
@@ -168,6 +177,20 @@ export const query = graphql`
     bgImage: file(relativePath: { eq: "oxford.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1080) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    healthinoteOld: file(relativePath: { eq: "healthinote_old.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
+          ...GatsbyImageSharpFluid
+        }
+      }
+    }
+    healthinoteNew: file(relativePath: { eq: "healthinote_new.png" }) {
+      childImageSharp {
+        fluid(maxWidth: 300) {
           ...GatsbyImageSharpFluid
         }
       }
