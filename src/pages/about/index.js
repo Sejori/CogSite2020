@@ -85,12 +85,12 @@ const Team = (props) => {
         <p>
           You can see the look of the app has changed quite a lot since our first prototype:
         </p>
-        <div style={{ display: "flex", justifyContent: "space-around", alignItems: "flex-start", flexWrap: "wrap" }}>
-          <div style={{ width: "30%", minWidth: "200px", margin: "0 1rem" }}>
+        <div style={{ display: "flex", justifyContent: "space-around", alignItems: "flex-end", flexWrap: "wrap" }}>
+          <div style={{ width: "150px", margin: "0 1rem" }}>
             <Img fluid={props.data.healthinoteOld.childImageSharp.fluid} style={{ width: "100%" }} />
             <p style={{ textAlign: "center" }}><strong>Prototype</strong></p>
           </div>
-          <div style={{ width: "30%", minWidth: "200px", margin: "0 1rem" }}>
+          <div style={{ width: "155px", margin: "0 1rem" }}>
             <Img fluid={props.data.healthinoteNew.childImageSharp.fluid} style={{ width: "100%" }} />
             <p style={{ textAlign: "center" }}><strong>V1.0</strong></p>
           </div>
